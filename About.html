@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>StrideSync : Progress Tracker</title>
+
+<link rel="icon" type="Image/png" href="../Images/StrideSynceFavicon.png">
+<link rel="stylesheet" href="../css files/style.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(to right, #000000 40%, #db7777 40%);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* NAV — SAME AS YOUR OTHER PAGES */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        background: #000;
+    }
+
+    .logo, .navigation a {
+        color: white !important;
+        text-decoration: none;
+        font-size: 18px;
+        margin-left: 20px;
+    }
+
+    .navigation a:hover {
+        color: #db7777;
+    }
+
+    /* ABOUT SECTION */
+    .about-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 150px 40px 40px;
+        width: 100%;
+    }
+
+    .about-box {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        padding: 40px 50px;
+        max-width: 650px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .about-box h1 {
+        font-size: 38px;
+        margin-bottom: 20px;
+        color: #ffcccc;
+        text-shadow: 1px 1px 4px black;
+    }
+
+    .about-box p {
+        line-height: 1.7rem;
+        font-size: 18px;
+        color: #ffecec;
+        text-shadow: 1px 1px 3px black;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2 class="logo">StrideSync</h2>
+
+    <nav class="navigation">
+        <a href="Index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="about-container">
+    <div class="about-box">
+        <h1>About StrideSync</h1>
+
+        <p>
+            StrideSync is a streamlined performance and progress-tracking platform designed
+            for athletes, coaches, and fitness enthusiasts. Whether you're training for a
+            competition, improving your personal bests, or simply staying active, StrideSync
+            helps you stay accountable and motivated.
+        </p>
+        <br>
+
+        <p>
+            With intuitive tracking tools, data-driven insights, clean visual dashboards,
+            and customizable progress logs, StrideSync transforms your training journey
+            into measurable growth. Our goal is to make it easier for you to monitor trends,
+            identify strengths, improve weaknesses, and stay consistent—one stride at a time.
+        </p>
+
+    </div>
+</section>
+
+</body>
+</html>
