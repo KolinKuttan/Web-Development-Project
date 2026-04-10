@@ -16,12 +16,12 @@
       box-sizing: border-box;
     }
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(to right, #000000 40%, #db7777 40%);
+    html, body {
+      height: 100vh;
+      background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
       color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      padding-top: 70px;
+      font-family: 'Arial', Helvetica, sans-serif;
+      overflow-x: hidden;
     }
 
     header {
@@ -34,33 +34,217 @@
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      background: #000;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .logo, .navigation a {
-      color: white !important;
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ffcccc, #db7777);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+    }
+
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+    }
+
+    .navigation a {
+      color: #ffecec !important;
       text-decoration: none;
       font-size: 18px;
-      margin-left: 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      white-space: nowrap;
     }
 
     .navigation a:hover {
-      color: #db7777;
-      transition: color 0.3s ease;
+      color: #ffcccc !important;
+      text-shadow: 0 0 10px rgba(255, 204, 204, 0.5);
     }
 
+    .navigation a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: linear-gradient(45deg, #ffcccc, #db7777);
+      transition: width 0.3s ease;
+    }
+
+    .navigation a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 40px;
+      gap: 60px;
+      max-width: 100%;
+    }
 
     .Welcome {
-      text-align: center;
-      padding: 80px 20px 40px;
+      width: 100%;
       max-width: 800px;
-      margin: 0 auto 40px;
+      text-align: center;
     }
 
     .Welcome h1 {
-      font-size: 36px;
-      margin-bottom: 16px;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      text-align: center;
       color: #ffcccc;
+      text-shadow: 
+        0 0 20px rgba(255, 204, 204, 0.6),
+        2px 2px 10px rgba(0, 0, 0, 0.8);
+      margin-bottom: 20px;
+      animation: glow 2s ease-in-out infinite alternate;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      hyphens: auto;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .Welcome p {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      line-height: 1.7;
+      color: #ffecec;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+      hyphens: auto;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 20px rgba(255, 204, 204, 0.6), 2px 2px 10px rgba(0, 0, 0, 0.8); }
+      to { text-shadow: 0 0 30px rgba(255, 204, 204, 0.9), 2px 2px 15px rgba(0, 0, 0, 0.9); }
+    }
+
+    .about-box {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 60px 40px;
+      max-width: 700px;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 25px;
+      box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .about-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    .about-box h1 {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      margin-bottom: 25px;
+      color: #ffcccc;
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .about-box p {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #ffecec;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+      hyphens: auto;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .navigation {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .navigation a {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 140px 15px 30px;
+        gap: 40px;
+      }
+
+      .about-box {
+        padding: 40px 25px;
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2 class="logo">StrideSync</h2>
+    <nav class="navigation">
+      <a href="Index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Services.html">Services</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="Welcome">
+      <h1>Welcome to StrideSync, beauty queen!</h1>
+      <p>
+        Are you ready to start tracking your athletic endeavours and show off to your friends how much food you can burn off?!
+      </p>
+    </section>
+
+    <div class="about-box">
+      <h1>About StrideSync</h1>
+      <p>
+        StrideSync is a streamlined performance and progress-tracking platform designed
+        for athletes, coaches, and fitness enthusiasts. Whether you're training for a
+        competition, improving your personal bests, or simply staying active, StrideSync
+        helps you stay accountable and motivated.
+      </p>
+      <p>
+        With intuitive tracking tools, data-driven insights, clean visual dashboards,
+        and customizable progress logs, StrideSync transforms your training journey
+        into measurable growth. Our goal is to make it easier for you to monitor trends,
+        identify strengths, improve weaknesses, and stay consistent—one stride at a time.
+      </p>
+    </div>
+  </main>
+</body>
+</html>      color: #ffcccc;
       text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
     }
 
