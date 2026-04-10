@@ -22,7 +22,7 @@
             overflow: hidden;
         }
 
-        /* CLEAN NAVIGATION BAR LIKE INDEX */
+
         header {
             position: fixed;
             top: 0;
@@ -33,7 +33,7 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            background-color: #000; /* Change if your index header is a different color */
+            background-color: #000; 
         }
 
         main {
@@ -66,17 +66,17 @@
             z-index: 2;
         }
 
-        .image:nth-child(1) { background-image: url('../Images/hiking.png'); }
-        .image:nth-child(2) { background-image: url('../Images/javelin.png'); }
-        .image:nth-child(3) { background-image: url('../Images/running.png'); }
-        .image:nth-child(4) { background-image: url('../Images/longjump.png'); }
+        .image:nth-child(1) { background-image: url("Images/hiking.png"); }
+        .image:nth-child(2) { background-image: url('Images/javelin.png'); }
+        .image:nth-child(3) { background-image: url('Images/running.png'); }
+        .image:nth-child(4) { background-image: url('Images/longjump.png'); }
 
         .logo, .navigation a {
             color: white;
         }
-        /* Each image cell */
+
 .image {
-    position: relative;                 /* required for centered text */
+    position: relative;                
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,7 @@
     transition: transform 0.3s ease;
 }
 
-/* Centered text on images */
+
 .image h2 {
     position: absolute;
     color: white;
@@ -103,7 +103,7 @@
     pointer-events: none;
 }
 
-/* Slight zoom effect on hover */
+
 .image:hover {
     transform: scale(1.05);
 }
