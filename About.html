@@ -1,66 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StrideSync : Progress Tracker</title>
 
-<title>StrideSync : Progress Tracker</title>
+  <link rel="icon" type="image/png" href="../Images/StrideSynceFavicon.png">
+  <link rel="stylesheet" href="../css files/style.css">
 
-<link rel="icon" type="Image/png" href="../Images/StrideSynceFavicon.png">
-<link rel="stylesheet" href="../css files/style.css">
-
-<style>
+  <style>
     * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-        min-height: 100vh;
-        background: linear-gradient(to right, #000000 40%, #db7777 40%);
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(to right, #000000 40%, #db7777 40%);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top: 70px; /* space for fixed header */
     }
 
-    /* NAV — SAME AS YOUR OTHER PAGES */
     header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 15px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 1000;
-        background: #000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      background: #000;
     }
 
     .logo, .navigation a {
-        color: white !important;
-        text-decoration: none;
-        font-size: 18px;
-        margin-left: 20px;
+      color: white !important;
+      text-decoration: none;
+      font-size: 18px;
+      margin-left: 20px;
     }
 
     .navigation a:hover {
-        color: #db7777;
+      color: #db7777;
+      transition: color 0.3s ease;
     }
 
-    /* ABOUT SECTION */
+
+    .Welcome {
+      text-align: center;
+      padding: 80px 20px 40px;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .Welcome h1 {
+      font-size: 36px;
+      margin-bottom: 16px;
+      color: #ffcccc;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .Welcome p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ffecec;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+
     .about-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 150px 40px 40px;
-        width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+      width: 100%;
     }
 
     .about-box {
-        background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      padding: 40px 50px;
+      max-width: 650px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .about-box h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #ffcccc;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .about-box p {
+      line-height: 1.7;
+      font-size: 17px;
+      color: #ffecec;
+      text-shadow: 1px 1px 3px black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2 class="logo">StrideSync</h2>
+    <nav class="navigation">
+      <a href="Index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Services.html">Services</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="Welcome">
+    <h1>Welcome to StrideSync, beauty queen!</h1>
+    <p>
+      Are you ready to start tracking your athletic endeavours and show off to your friends how much food you can burn off?!
+    </p>
+  </section>
+
+  <section class="about-container">
+    <div class="about-box">
+      <h1>About StrideSync</h1>
+
+      <p>
+        StrideSync is a streamlined performance and progress-tracking platform designed
+        for athletes, coaches, and fitness enthusiasts. Whether you're training for a
+        competition, improving your personal bests, or simply staying active, StrideSync
+        helps you stay accountable and motivated.
+      </p>
+      <br>
+
+      <p>
+        With intuitive tracking tools, data-driven insights, clean visual dashboards,
+        and customizable progress logs, StrideSync transforms your training journey
+        into measurable growth. Our goal is to make it easier for you to monitor trends,
+        identify strengths, improve weaknesses, and stay consistent—one stride at a time.
+      </p>
+    </div>
+  </section>
+
+</body>
+</html>        background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(6px);
         padding: 40px 50px;
         max-width: 650px;
