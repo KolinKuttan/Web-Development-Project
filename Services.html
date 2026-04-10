@@ -35,6 +35,52 @@
             z-index: 1000;
             background-color: #000; 
         }
+        .logo {
+      font-size: 28px;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ffcccc, #db7777);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+    }
+
+    .navigation {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+    }
+
+    .navigation a {
+      color: #ffecec !important;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .navigation a:hover {
+      color: #ffcccc !important;
+      text-shadow: 0 0 10px rgba(255, 204, 204, 0.5);
+    }
+
+    .navigation a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: linear-gradient(45deg, #ffcccc, #db7777);
+      transition: width 0.3s ease;
+    }
+
+    .navigation a:hover::after {
+      width: 100%;
+    }
 
         main {
             width: 100%;
