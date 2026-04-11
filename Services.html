@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrideSync : Progress Tracker</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StrideSync : Progress Tracker</title>
 
-    <link rel="icon" type="image/png" href="StrideSynceFavicon.png">
+  /png" href="StrideSynceFavicon.png" />
 
-    <style>
-        * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        body {
-            height: 100vh;
-            overflow: hidden;
-        }
+    body {
+      height: 100vh;
+      overflow: hidden;
+    }
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1001;
+      background-color: #000;
+    }
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            background-color: #000; 
-        }
-        .logo {
+    .logo {
       font-size: 28px;
       font-weight: bold;
       background: linear-gradient(45deg, #ffcccc, #db7777);
@@ -82,91 +81,88 @@
       width: 100%;
     }
 
-        main div {
-            text-align: center;
-        }
+    main {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
 
-        .image-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            width: 100%;
-            height: 100%;
-        }
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
 
-        .image {
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.3s ease;
-        }
+    .image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+      overflow: hidden;
+    }
 
-        .image:hover {
-            transform: scale(1.05);
-            z-index: 2;
-        }
+    .image:nth-child(1) { background-image: url('./hiking.png'); }
+    .image:nth-child(2) { background-image: url('./javelin.png'); }
+    .image:nth-child(3) { background-image: url('./running.png'); }
+    .image:nth-child(4) { background-image: url('./longjump.png'); }
 
-        .image:nth-child(1) { background-image: url('./hiking.png'); }
-        .image:nth-child(2) { background-image: url('./javelin.png'); }
-        .image:nth-child(3) { background-image: url('./running.png'); }
-        .image:nth-child(4) { background-image: url('./longjump.png'); }
+    .image:hover {
+      transform: scale(1.05);
+      z-index: 2;
+    }
 
-        .logo, .navigation a {
-            color: white;
-        }
-
-.image {
-    position: relative;                
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.3s ease;
-}
-
-
-.image h2 {
-    position: absolute;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    text-shadow:
+    .image h2 {
+      position: absolute;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-shadow:
         0 0 8px rgba(0,0,0,0.5),
         0 0 15px rgba(0,0,0,0.5),
         0 0 25px rgba(0,0,0,0.5);
-    
-    z-index: 5;
-    pointer-events: none;
-}
+      z-index: 5;
+      pointer-events: none;
+    }
 
-
-.image:hover {
-    transform: scale(1.05);
-}
-    </style>
+    .logo, .navigation a {
+      color: white;
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <h2 class="logo">StrideSync</h2>
+    <nav class="navigation">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Services.html">Services</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <header>
-        <h2 class="logo">StrideSync</h2>
-        <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="About.html">About</a>
-            <a href="Services.html">Services</a>
-            <a href="Contact.html">Contact</a>
-        </nav>
-    </header>
-
-    <main>
-        <div class="image-grid">
-        <div class="image"><h2>HIKING</h2></div>
-        <div class="image"><h2>THROWING</h2></div>
-        <div class="image"><h2>LONG JUMP</h2></div>
-        <div class="image"><h2>RUNNING</h2></div>
-    </main>
-
+  <main>
+    <div class="image-grid">
+      <div class="image"><h2>HIKING</h2></div>
+      <div class="image"><h2>THROWING</h2></div>
+      <div class="image"><h2>LONG JUMP</h2></div>
+      <div class="image"><h2>RUNNING</h2></div>
+    </div>
+  </main>
 </body>
 </html>
